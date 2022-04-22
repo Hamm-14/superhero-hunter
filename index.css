@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f1f1f1;
+  background: url("https://media.npr.org/assets/img/2016/11/15/gettyimages-534480043_custom-0f61fb0d9530db017664dd2a3cae37c91078153c.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .nav {
   background: black;
@@ -167,4 +169,16 @@ body {
   padding: 20px 0;
   font-size: 20px;
   color: #6d6d6d;
+}
+
+#about-app {
+  position: relative;
+  width: 50vw;
+  height: 70vh;
+  left: -2%;
+  top: 5%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }

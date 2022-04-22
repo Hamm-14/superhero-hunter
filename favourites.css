@@ -51,6 +51,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: wheat;
 }
 .fav-item .hero-info button {
   margin: 20px 10px;
@@ -67,6 +68,7 @@ h1 {
   display: flex;
   margin-bottom: 10px;
   border: 1px solid lightgray;
+  background-color: #fff3dc;
 }
 .fav-item img {
   height: 150px;
