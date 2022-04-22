@@ -10,37 +10,46 @@
     <div class="nav">
       <span id="app-title">Superhero Hunter</span>
       <div>
-        <button class="nav-btn">Home</button>
-        <button class="nav-btn">Favourites</button>
+        <button class="nav-btn" onclick="window.location.href='index.html'">
+          Home
+        </button>
+        <button
+          class="nav-btn"
+          onclick="window.location.href='favourites.html'"
+        >
+          Favourites
+        </button>
       </div>
     </div>
     <main>
       <div id="left">
-        <img
-          src="https://i.pinimg.com/originals/21/4d/dd/214ddd19794046c4ff7c5b1d0c3d5f3c.jpg"
-        />
+        <img id="avatar" />
       </div>
       <div id="right">
-        <div id="hero-title">Batman</div>
+        <div id="hero-title"></div>
         <div id="about">
           <div id="powerstats">
             <span class="cate">Powerstats</span>
-            <div id="intelligence"></div>
-            <div id="strength"></div>
-            <div id="speed"></div>
-            <div id="durability"></div>
-            <div id="power"></div>
-            <div id="combat"></div>
+            <ul id="about-power">
+              <li id="intelligence"></li>
+              <li id="strength"></li>
+              <li id="speed"></li>
+              <li id="durability"></li>
+              <li id="power"></li>
+              <li id="combat"></li>
+            </ul>
           </div>
           <div id="biography">
             <span class="cate">Biography</span>
-            <div id="full-name"></div>
-            <div id="alter-egos"></div>
-            <div id="aliases"></div>
-            <div id="place-of-birth"></div>
-            <div id="first-appearance"></div>
-            <div id="publisher"></div>
-            <div id="alignment"></div>
+            <ul id="about-bio">
+              <li id="full-name"></li>
+              <li id="alter-egos"></li>
+              <li id="aliases"></li>
+              <li id="place-of-birth"></li>
+              <li id="first-appearance"></li>
+              <li id="publisher"></li>
+              <li id="alignment"></li>
+            </ul>
           </div>
         </div>
       </div>
