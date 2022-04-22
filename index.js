@@ -99,7 +99,7 @@ async function clearSearchResults() {
 
 // redirect to a super hero page with respective id
 async function displayHeroPage(e) {
-  let heroPagePath = `${window.location.pathname} + /../superhero.html#id=${e.target.id}`;
+  let heroPagePath = `${window.location.pathname} + /../hero.html#id=${e.target.id}`;
   window.open(heroPagePath);
 }
 

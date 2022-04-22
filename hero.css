@@ -1,0 +1,82 @@
+.nav {
+  background: black;
+  height: 70px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#app-title {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: monospace;
+}
+.nav-btn {
+  background: #f2711c;
+  height: 43px;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  top: -1px;
+}
+
+main {
+  position: relative;
+  display: flex;
+  top: 10%;
+  left: 25%;
+  height: 70vh;
+  width: 100vh;
+  /* border: 2px solid black; */
+}
+
+#left {
+  height: 100%;
+  width: 40%;
+}
+
+#right {
+  height: 99.5%;
+  width: 60%;
+  border: 1px solid black;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+#hero-title {
+  height: 10%;
+  width: 100%;
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#about {
+  display: flex;
+  height: 90%;
+  width: 100%;
+}
+
+.cate {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#powerstats,
+#biography {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
