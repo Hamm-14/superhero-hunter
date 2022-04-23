@@ -9,13 +9,12 @@ function triggerEventListeners() {
   searchHero.addEventListener("keyup", handleSearch);
 }
 
-// when a user clicks enter in the search bar redirects to superhero page
+// when a user clicks enter in the search bar redirects him to superhero page
 async function handleEnter(nameToSearch) {
   let data = await fetchAsync(`${url}/search/${nameToSearch}`);
   // redirect to super hero page if success
   if (data.response === "success") {
-    console.log(data);
-    let heroPagePath = `${window.location.pathname} + /../superhero.html#id=${data.results[0].id}`;
+    let heroPagePath = `${window.location.pathname} + /../hero.html#id=${data.results[0].id}`;
     window.open(heroPagePath);
   }
 }
@@ -33,7 +32,6 @@ async function handleSearch(e) {
   } else {
     // fetch complete data
     let data = await fetchAsync(`${url}/search/${nameToSearch}`);
-    console.log(data);
     if (data && data.response === "success") {
       searchResultsContainer.innerHTML = "";
       let favorites = getFavourites();
@@ -41,7 +39,6 @@ async function handleSearch(e) {
       for (let i = 0; i < data.results.length; i++) {
         let searchItem = document.createElement("div");
         searchItem.className = "search-result";
-        // searchItem.setAttribute("id", `${data.results[i].id}`);
 
         let heroImage = document.createElement("img");
         heroImage.setAttribute("src", `${data.results[i].image.url}`);
@@ -105,19 +102,18 @@ async function displayHeroPage(e) {
 
 // return the list of favourite hero id's which is stored in local storage
 function getFavourites() {
-  let favs;
+  let favourites;
   if (localStorage.getItem("favHeros") === null) {
-    favs = [];
+    favourites = [];
   } else {
-    favs = JSON.parse(localStorage.getItem("favHeros"));
+    favourites = JSON.parse(localStorage.getItem("favHeros"));
   }
-  return favs;
+  return favourites;
 }
 
 // add superhero to favourites
 async function addToFavourites(e) {
   let itemId = e.target.parentElement.id;
-  console.log("itemId add", itemId);
   let favorites = getFavourites();
   if (!favorites.includes(itemId)) {
     favorites.push(itemId);

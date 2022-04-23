@@ -47,7 +47,7 @@ async function updateFavouriteHeroes() {
   }
 }
 
-// remove from favourites and remove the node from dom
+// remove from favourites and also remove the node from dom
 async function removeFromFavourites(e) {
   let id = e.target.parentElement.parentElement.id;
   let favs = getFavourites();

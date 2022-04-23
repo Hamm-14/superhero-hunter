@@ -3,7 +3,7 @@ const heroTitle = document.getElementById("hero-title");
 const bio = document.getElementById("biography");
 const powerstats = document.getElementById("powerstats");
 
-// call the update UI method when the window is loaded
+// call the update UI method when the window loads completely
 window.onload = function () {
   let windowUrl = window.location.href;
   let heroId = windowUrl.substring(windowUrl.lastIndexOf("=") + 1);
@@ -14,7 +14,6 @@ window.onload = function () {
 async function manipulateDOM(id) {
   let url = `https://superheroapi.com/api.php/2928355607286861/${id}`;
   let data = await fetchAsync(url);
-  console.log(data.name);
   if (data && data.response == "success") {
     heroTitle.innerHTML = data["name"];
     avatar.src = data["image"]["url"];
